@@ -87,9 +87,16 @@
     <section id="contact" class="container section">
       <h2>Contact</h2>
       <ul class="contact">
-        <li>Email student: <a href="mailto:athomas202x@outlook.com">890006187@outlook.com</a></li>
-        <li>Email professional: <a href="mailto:angelathomas202X@outlook.com">athomas202X@outlook.com</a></li>
-        <li>LinkedIn: <a href="#" id="linkedinLink">https://www.linkedin.com/in/angela-thomastx/</a></li>
+        <li>Email student: <a href="mailto:890006187@outlook.com">890006187@outlook.com</a></li>
+        <li>Email professional: <a href="mailto:athomas202X@outlook.com">athomas202X@outlook.com</a></li>
+        <li>LinkedIn: 
+          <a 
+            id="linkedinLink"
+            href="https://www.linkedin.com/in/angela-thomastx/"
+            target="_blank" rel="noopener noreferrer">
+            https://www.linkedin.com/in/angela-thomastx/
+          </a>
+        </li>
       </ul>
     </section>
   </main>
@@ -102,27 +109,39 @@
     </div>
   </footer>
 
-
   <script>
   document.addEventListener("DOMContentLoaded", () => {
     // Update year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     // Portfolio links
     const GH_REPO_URL = "https://github.com/athomas202X/portfolio-site";
     const LINKEDIN_URL = "https://www.linkedin.com/in/angela-thomastx/";
 
+    // Footer buttons
     const githubBtn = document.getElementById("githubButton");
+    if (githubBtn) {
+      githubBtn.href = GH_REPO_URL;
+      githubBtn.target = "_blank";
+      githubBtn.rel = "noopener noreferrer";
+    }
+
     const linkedinBtn = document.getElementById("linkedinButton");
+    if (linkedinBtn) {
+      linkedinBtn.href = LINKEDIN_URL;
+      linkedinBtn.target = "_blank";
+      linkedinBtn.rel = "noopener noreferrer";
+    }
 
-    githubBtn.setAttribute("href", GH_REPO_URL);
-    githubBtn.setAttribute("target", "_blank");
-    githubBtn.setAttribute("rel", "noopener noreferrer");
-
-    linkedinBtn.setAttribute("href", LINKEDIN_URL);
-    linkedinBtn.setAttribute("target", "_blank");
-    linkedinBtn.setAttribute("rel", "noopener noreferrer");
+    // Project card "GitHub repo" button
+    const repoLink = document.getElementById("repoLink");
+    if (repoLink) {
+      repoLink.href = GH_REPO_URL;
+      repoLink.target = "_blank";
+      repoLink.rel = "noopener noreferrer";
+    }
   });
-</script>
+  </script>
 </body>
 </html>
