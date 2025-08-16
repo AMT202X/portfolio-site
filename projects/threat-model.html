@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secure Azure Threat Model</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="container site-header">
+    <div class="brand">
+      <div class="avatar">A</div>
+      <div>
+        <h1>Secure Azure Threat Model</h1>
+        <p class="subtitle">Microsoft Threat Modeling Tool • STRIDE • Azure native mitigations</p>
+      </div>
+    </div>
+    <nav>
+      <a href="../index.html#projects">Back to Projects</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="card">
+      <h2>Overview</h2>
+      <p>
+        This project uses Microsoft Threat Modeling Tool to diagram an Azure web application and analyze threats with STRIDE. 
+        The model includes Azure Front Door, App Service, API Management, Microsoft Entra ID, SQL Database, Blob Storage, Key Vault, and Monitor with clear trust boundaries.
+      </p>
+      <h3>Key outcomes</h3>
+      <ul class="tags">
+        <li>DFD with Azure boundaries</li>
+        <li>Auto generated threats</li>
+        <li>Mitigations mapped to Azure controls</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Screenshots</h2>
+      <p>Replace the placeholders with your real screenshots after you complete the model.</p>
+      <img src="../assets/threat-diagram-placeholder.png" alt="Threat model diagram placeholder" style="width:100%;border-radius:12px;border:1px solid #1c2547">
+    </article>
+
+    <article class="card">
+      <h2>Findings and mitigations</h2>
+      <ul>
+        <li>Use Azure Key Vault with managed identity for secret retrieval</li>
+        <li>Enforce HTTPS and min TLS 1.2 for all flows</li>
+        <li>Use private endpoints for SQL and Storage where applicable</li>
+        <li>Enable WAF on Front Door and validation policies on API Management</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Artifacts</h2>
+      <ul>
+        <li>Model file TMT7</li>
+        <li>PDF export of threats and mitigations</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="container site-footer">
+    <small>© <span id="year"></span> Angela Monique Thomas</small>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

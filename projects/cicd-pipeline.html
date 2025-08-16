@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Azure CI CD Pipeline</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="container site-header">
+    <div class="brand">
+      <div class="avatar">A</div>
+      <div>
+        <h1>Azure CI CD Pipeline</h1>
+        <p class="subtitle">Bicep • GitHub Actions • App Service with staging slot</p>
+      </div>
+    </div>
+    <nav>
+      <a href="../index.html#projects">Back to Projects</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="card">
+      <h2>Overview</h2>
+      <p>
+        Three environment pipeline that deploys a Flask app to Azure App Service using Bicep and GitHub Actions. 
+        Dev and QA deploy automatically and Production requires approval, followed by a safe slot swap. 
+        Application Insights captures telemetry and a health endpoint supports smoke tests.
+      </p>
+      <h3>Key outcomes</h3>
+      <ul class="tags">
+        <li>IaC with Bicep</li>
+        <li>CI tests and CodeQL</li>
+        <li>CD with approvals and slot swap</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Screenshots</h2>
+      <p>Replace the placeholders with your real screenshots after you complete the pipeline.</p>
+      <img src="../assets/pipeline-run-placeholder.png" alt="Pipeline run placeholder" style="width:100%;border-radius:12px;border:1px solid #1c2547">
+    </article>
+
+    <article class="card">
+      <h2>Repo and resources</h2>
+      <ul>
+        <li><a href="#" id="repoLink">GitHub repository</a></li>
+        <li>Azure App Service with staging slot</li>
+        <li>Azure Key Vault and Application Insights</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="container site-footer">
+    <small>© <span id="year"></span> Angela Monique Thomas</small>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const GH_REPO_URL = "https://github.com/youruser/azure-portfolio-pipelines";
+    document.getElementById("repoLink").href = GH_REPO_URL;
+  </script>
+</body>
+</html>
