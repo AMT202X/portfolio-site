@@ -95,17 +95,34 @@
   </main>
 
   <footer class="container site-footer">
-    <small>© <span id="year"></span> Angela Monique Thomas. Built with a simple static template.</small>
+    <small>© <span id="year"></span> Angela Monique Thomas</small>
+    <div class="social-links">
+      <a id="githubButton" href="#">GitHub</a> |
+      <a id="linkedinButton" href="#">LinkedIn</a>
+    </div>
   </footer>
 
+
   <script>
-    // Simple runtime tweaks
+  document.addEventListener("DOMContentLoaded", () => {
+    // Update year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
-    // Set these two values after you publish your repos
-    const GH_REPO_URL = "https://github.com/youruser/azure-portfolio-pipelines";
-    const LINKEDIN_URL = "https://www.linkedin.com/in/your-link/";
-    document.getElementById("repoLink").href = GH_REPO_URL;
-    document.getElementById("linkedinLink").href = LINKEDIN_URL;
-  </script>
+
+    // Portfolio links
+    const GH_REPO_URL = "https://github.com/athomas202X/portfolio-site";
+    const LINKEDIN_URL = "https://www.linkedin.com/in/angela-thomastx/";
+
+    const githubBtn = document.getElementById("githubButton");
+    const linkedinBtn = document.getElementById("linkedinButton");
+
+    githubBtn.setAttribute("href", GH_REPO_URL);
+    githubBtn.setAttribute("target", "_blank");
+    githubBtn.setAttribute("rel", "noopener noreferrer");
+
+    linkedinBtn.setAttribute("href", LINKEDIN_URL);
+    linkedinBtn.setAttribute("target", "_blank");
+    linkedinBtn.setAttribute("rel", "noopener noreferrer");
+  });
+</script>
 </body>
 </html>
