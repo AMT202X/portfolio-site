@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Angela Monique Thomas — Portfolio</title>
+  <title>Angela Thomas — Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,17 +23,55 @@
     </nav>
   </header>
 
-  <main>
-    <section id="about" class="container section">
+<header class="container site-header">
+  <div class="brand">
+    <div class="avatar">A</div>
+    <div>
+      <h1>Angela Monique Thomas</h1>
+      <p class="subtitle">Cloud and DevSecOps student building secure Azure projects</p>
+    </div>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- separator under title + subtitle -->
+<div class="section-sep container"></div>
+
+<main class="container layout">
+  <!-- Left column: contact -->
+  <aside class="contact-col" id="contact">
+    <h2>Contact</h2>
+    <ul class="contact">
+      <li>Email student: <a href="mailto:890006187@outlook.com">890006187@outlook.com</a></li>
+      <li>Email professional: <a href="mailto:athomas202X@outlook.com">athomas202X@outlook.com</a></li>
+      <li>LinkedIn:
+        <a
+          id="linkedinLink"
+          href="https://www.linkedin.com/in/angela-thomastx/"
+          target="_blank" rel="noopener noreferrer">
+          https://www.linkedin.com/in/angela-thomastx/
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Right column: main content -->
+  <section class="content-col">
+    <section id="about" class="section">
       <h2>About</h2>
       <p>
-        I am a student focused on Azure cloud, CI CD, and DevSecOps. 
-        My goal is to design secure cloud architectures and automate reliable deployments. 
+        I am a student focused on Azure cloud, CI CD, and DevSecOps.
+        My goal is to design secure cloud architectures and automate reliable deployments.
         This portfolio highlights a threat modeling project and a multi environment GitHub Actions pipeline for an Azure App Service app using Bicep.
       </p>
     </section>
 
-    <section id="skills" class="container section">
+    <section id="skills" class="section">
       <h2>Skills</h2>
       <ul class="tags">
         <li>Azure</li>
@@ -48,7 +86,7 @@
       </ul>
     </section>
 
-    <section id="projects" class="container section">
+    <section id="projects" class="section">
       <h2>Projects</h2>
 
       <article class="card">
@@ -57,8 +95,8 @@
           <div class="meta">Microsoft Threat Modeling Tool • STRIDE • Azure native mitigations</div>
         </div>
         <p>
-          Data flow diagram with Azure trust boundaries and services including Front Door, App Service, API Management, SQL Database, Blob Storage, Key Vault, and Monitor. 
-          Generated threats and documented mitigations such as private endpoints, managed identities, WAF, RBAC, and TLS. 
+          Data flow diagram with Azure trust boundaries and services including Front Door, App Service, API Management, SQL Database, Blob Storage, Key Vault, and Monitor.
+          Generated threats and documented mitigations such as private endpoints, managed identities, WAF, RBAC, and TLS.
         </p>
         <div class="actions">
           <a class="btn" href="projects/threat-model.html">View project</a>
@@ -71,9 +109,9 @@
           <div class="meta">Bicep • GitHub Actions • App Service with staging slot</div>
         </div>
         <p>
-          Three environment pipeline with Dev, QA, and Prod. 
-          CI runs tests and CodeQL. 
-          CD provisions infra and deploys to a staging slot with manual approval for production. 
+          Three environment pipeline with Dev, QA, and Prod.
+          CI runs tests and CodeQL.
+          CD provisions infra and deploys to a staging slot with manual approval for production.
           App Insights monitors health and a version endpoint proves build identity.
         </p>
         <div class="actions">
@@ -83,23 +121,9 @@
       </article>
 
     </section>
-
-    <section id="contact" class="container section">
-      <h2>Contact</h2>
-      <ul class="contact">
-        <li>Email student: <a href="mailto:890006187@outlook.com">890006187@outlook.com</a></li>
-        <li>Email professional: <a href="mailto:athomas202X@outlook.com">athomas202X@outlook.com</a></li>
-        <li>LinkedIn: 
-          <a 
-            id="linkedinLink"
-            href="https://www.linkedin.com/in/angela-thomastx/"
-            target="_blank" rel="noopener noreferrer">
-            https://www.linkedin.com/in/angela-thomastx/
-          </a>
-        </li>
-      </ul>
-    </section>
-  </main>
+  </section>
+</main>
+<div>
 
   <footer class="container site-footer">
     <small>© <span id="year"></span> Angela Monique Thomas</small>
