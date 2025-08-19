@@ -31,3 +31,51 @@ nav a:hover{opacity:1}
   .site-header{flex-direction:column;align-items:flex-start}
   nav{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.5rem}
 }
+/* thin separator under the header */
+.section-sep {
+  border-bottom: 1px solid #e5e7eb;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* two-column layout */
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* left column then main content */
+  gap: 24px;
+  align-items: start;
+}
+
+/* left column with vertical divider */
+.contact-col {
+  border-right: 1px solid #1c2547; /* use your accent color */
+  padding-right: 20px;
+}
+
+/* right column content */
+.content-col {
+  padding-left: 4px; /* small breathing room next to divider */
+}
+
+/* contact list tidy spacing */
+.contact {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+}
+.contact li + li { margin-top: 0.25rem; }
+
+/* responsive: stack on narrow screens */
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .contact-col {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding-right: 0;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  .content-col { padding-left: 0; }
+}
